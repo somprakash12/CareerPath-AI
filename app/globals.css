@@ -1,0 +1,252 @@
+@import "tailwindcss";
+@source "../app";
+@source "../components";
+@source "../lib";
+
+:root {
+  --background: #030712;
+  --foreground: #f8fafc;
+  --card: #0b0f19;
+  --card-foreground: #f8fafc;
+  --border: #1e293b;
+}
+
+body {
+  background-color: #030712;
+  color: #f8fafc;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom ultra-sleek scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #030712;
+}
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 9999px;
+  transition: background 0.2s ease;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #4f46e5;
+}
+
+/* Eye-Catching Keyframe Animations */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    box-shadow: 0 0 15px rgba(99, 102, 241, 0.25);
+  }
+  50% {
+    box-shadow: 0 0 35px rgba(99, 102, 241, 0.6);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+@keyframes ambientBlob {
+  0%, 100% {
+    transform: translate(0px, 0px) scale(1);
+  }
+  33% {
+    transform: translate(30px, -40px) scale(1.1);
+  }
+  66% {
+    transform: translate(-20px, 20px) scale(0.95);
+  }
+}
+
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
+
+.animate-float-delayed {
+  animation: float 5s ease-in-out infinite 1.5s;
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 3s ease-in-out infinite;
+}
+
+.animate-ambient-blob {
+  animation: ambientBlob 9s ease-in-out infinite;
+}
+
+/* Complementary Ambient Aurora Animations */
+@keyframes auroraDrift1 {
+  0% {
+    transform: translate(0, 0) scale(1);
+    opacity: 0.45;
+  }
+  50% {
+    transform: translate(140px, 90px) scale(1.18);
+    opacity: 0.7;
+  }
+  100% {
+    transform: translate(-70px, 160px) scale(0.92);
+    opacity: 0.45;
+  }
+}
+
+@keyframes auroraDrift2 {
+  0% {
+    transform: translate(0, 0) scale(1);
+    opacity: 0.4;
+  }
+  50% {
+    transform: translate(-150px, -70px) scale(1.22);
+    opacity: 0.65;
+  }
+  100% {
+    transform: translate(90px, -110px) scale(0.95);
+    opacity: 0.4;
+  }
+}
+
+@keyframes auroraDrift3 {
+  0% {
+    transform: translate(0, 0) scale(0.9);
+    opacity: 0.35;
+  }
+  50% {
+    transform: translate(100px, -120px) scale(1.12);
+    opacity: 0.6;
+  }
+  100% {
+    transform: translate(-110px, 70px) scale(1.05);
+    opacity: 0.35;
+  }
+}
+
+@keyframes auroraDrift4 {
+  0% {
+    transform: translate(0, 0) scale(1);
+    opacity: 0.3;
+  }
+  50% {
+    transform: translate(-120px, 100px) scale(1.15);
+    opacity: 0.55;
+  }
+  100% {
+    transform: translate(80px, -60px) scale(0.9);
+    opacity: 0.3;
+  }
+}
+
+@keyframes starTwinkle {
+  0%, 100% {
+    opacity: 0.2;
+    transform: scale(0.8) translateY(0);
+  }
+  50% {
+    opacity: 0.85;
+    transform: scale(1.25) translateY(-8px);
+  }
+}
+
+.animate-aurora-1 {
+  animation: auroraDrift1 20s ease-in-out infinite alternate;
+}
+.animate-aurora-2 {
+  animation: auroraDrift2 25s ease-in-out infinite alternate;
+}
+.animate-aurora-3 {
+  animation: auroraDrift3 18s ease-in-out infinite alternate;
+}
+.animate-aurora-4 {
+  animation: auroraDrift4 22s ease-in-out infinite alternate;
+}
+.animate-star-twinkle {
+  animation: starTwinkle 5s ease-in-out infinite;
+}
+
+/* Subtle tech cyber grid */
+.bg-grid-cyber {
+  background-size: 48px 48px;
+  background-image: 
+    linear-gradient(to right, rgba(99, 102, 241, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(99, 102, 241, 0.05) 1px, transparent 1px);
+}
+
+.bg-dots-cyber {
+  background-size: 32px 32px;
+  background-image: radial-gradient(rgba(129, 140, 248, 0.12) 1.2px, transparent 1.2px);
+}
+
+.shimmer-text {
+  background: linear-gradient(90deg, #818cf8 0%, #c084fc 40%, #38bdf8 70%, #818cf8 100%);
+  background-size: 200% auto;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: shimmer 4s linear infinite;
+}
+
+/* Ultra-smooth button light-sweep effect */
+.btn-shine {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.btn-shine::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    60deg,
+    transparent 35%,
+    rgba(255, 255, 255, 0.22) 50%,
+    transparent 65%
+  );
+  transform: translateX(-100%);
+  transition: transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+  pointer-events: none;
+}
+.btn-shine:hover::after {
+  transform: translateX(100%);
+}
+
+/* Dynamic glowing button pulse with spring physics */
+.btn-glow {
+  position: relative;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.btn-glow:hover {
+  transform: translateY(-2px) scale(1.025);
+  box-shadow: 0 10px 30px -5px rgba(99, 102, 241, 0.5), 0 0 20px rgba(129, 140, 248, 0.35);
+}
+.btn-glow:active {
+  transform: translateY(1px) scale(0.975);
+}
+
+.card-hover-effect {
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.card-hover-effect:hover {
+  transform: translateY(-4px) scale-[1.01];
+  border-color: rgba(99, 102, 241, 0.5);
+  box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.8), 0 0 25px -3px rgba(99, 102, 241, 0.25);
+}

@@ -1,0 +1,33 @@
+{
+  "name": "careerpath-ai",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "launch": "node scripts/launch.js",
+    "launch:prod": "node scripts/launch.js --prod",
+    "dev": "node scripts/ensure-clean-next.js && next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@google/generative-ai": "^0.24.0",
+    "@supabase/ssr": "^0.5.2",
+    "@supabase/supabase-js": "^2.49.1",
+    "clsx": "^2.1.1",
+    "lucide-react": "^1.16.0",
+    "next": "^15.2.1",
+    "pdf-parse": "^1.1.1",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "recharts": "^2.15.1",
+    "tailwind-merge": "^3.0.2"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.0.9",
+    "eslint": "^9",
+    "eslint-config-next": "^15.2.1",
+    "postcss": "^8.5.3",
+    "tailwindcss": "^4.0.9"
+  }
+}
